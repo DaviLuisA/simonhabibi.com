@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Simon 🍌</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos para a página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://s.glbimg.com/jo/g1/f/original/2011/07/05/caters_monkey_snapper_03.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .gallery-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-top: 0;
+            letter-spacing: 1px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            width: calc(25% - 20px);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <div class="gallery-container">
+            <h1>GALERIA DE SIMON 🍌</h1>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://s4.aconvert.com/convert/p3r68-cdx67/ae0cg-xijrt.jpg" alt="Imagem 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://s4.aconvert.com/convert/p3r68-cdx67/ax96b-ou7eh.jpg" alt="Imagem 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://s4.aconvert.com/convert/p3r68-cdx67/aden7-afhb9.jpg" alt="Imagem 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://s4.aconvert.com/convert/p3r68-cdx67/aorvo-t7fia.jpg" alt="Imagem 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>

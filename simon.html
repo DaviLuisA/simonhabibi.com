@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Simon Habibi 🍌</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos para a página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://s.glbimg.com/jo/g1/f/original/2011/07/05/caters_monkey_snapper_03.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #ddd;
+            outline: none;
+            transition: border-bottom-color 0.3s ease;
+            position: relative;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-bottom-color: #4285f4;
+        }
+
+        .show-password {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #999;
+            z-index: 1;
+        }
+
+        .show-password:hover {
+            color: #666;
+        }
+
+        input[type="submit"] {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 12px;
+            width: calc(100% - 40px);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ae8;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login - Simon Habibi 🍌</h1>
+        <form id="loginForm" onsubmit="return login()">
+            <input type="text" id="username" name="username" placeholder="Nome de usuário" required><br><br>
+            <input type="password" id="password" name="password" placeholder="Senha" required>
+            <span class="show-password" onclick="togglePasswordVisibility()"><i id="eyeIcon" class="fas fa-eye"></i></span>
+            <br><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Verifica se o usuário e a senha estão corretos
+            if (username === "Simon" && password === "Habibi") {
+                // Redireciona para a página da galeria
+                window.location.href = "galeria.html";
+                return false; // Evita que o formulário seja enviado
+            } else {
+                // Se as credenciais estiverem incorretas, exibe uma mensagem de erro
+                alert("Credenciais incorretas. Por favor, tente novamente.");
+                return false;
+            }
+        }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var eyeIcon = document.getElementById("eyeIcon");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>
+</html>
